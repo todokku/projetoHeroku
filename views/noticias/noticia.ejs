@@ -1,0 +1,17 @@
+<%- include(header) %>
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-md-12">
+	    			<div class="noticia_wrapper">
+		    			<span class="noticia_autor"><%=search[0].autor%></span>
+		    			<span class="noticia_titulo"><%=search[0].titulo%></span>
+		    			<span class="noticia_data"><%=search[0].data_criacao%></span>
+		    			<br />
+		    			<p class="noticia_resumo">
+		    				<%=search[0].noticia%>
+		    			</p>
+		    		</div>
+		    	</div>
+	    	</div>
+	    </div>
+<%- include(footer) %>

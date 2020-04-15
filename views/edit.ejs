@@ -1,0 +1,14 @@
+
+<%- include(header) %>
+<h1>Tela de Editar</h1>
+<form action="/alterar" method="post">
+    <label for="id">ID - <%- search[0].idnoticias %></label><br>
+    <input type="hidden" name="idnoticias" value="<%- search[0].idnoticias %>">
+    <label for="titulo">Insira um titulo</label>
+    <input type="text" name="titulo" id="titulo" value="<%- search[0].titulo %>"><br>
+    <label for="noticia">Insira sua noticia</label>
+    <input type="text" name="noticia" id="noticia" value="<%- search[0].noticia %>"><br>
+    <button type="submit">Alterar</button>
+</form>
+<a href="/">Voltar</a>
+<%- include(footer) %>

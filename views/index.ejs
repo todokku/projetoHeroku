@@ -1,0 +1,46 @@
+<%- include(header) %>
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-md-8">
+	    			<div class="noticia_wrapper">
+		    			<span class="noticia_autor"><%= noticias[0].autor %></span>
+		    			<a href="noticia?idnoticias=<%= noticias[0].idnoticias %>" class="noticia_titulo"><%= noticias[0].titulo %></a>
+		    			<span class="noticia_data"><%= noticias[0].data_criacao %></span>
+		    			<br />
+		    			<p class="noticia_resumo">
+		    				<%= noticias[0].resumo %>
+		    			</p>
+		    		</div>
+		    	</div>
+	    		<div class="col-md-4">
+	    			<div class="noticia_wrapper">
+		    			<span class="noticia_autor"><%= noticias[1].autor %></span>
+		    			<a href="noticia?idnoticias=<%= noticias[1].idnoticias %>" class="noticia_titulo"><%= noticias[1].titulo %></a>
+		    			<span class="noticia_data"><%= noticias[1].data_criacao %></span>
+		    			<br />
+		    			<p class="noticia_resumo">
+		    				<%= noticias[1].resumo %>
+		    			</p>
+		    		</div>
+		    	</div>
+	    	</div>
+	    	<div class="row">
+	    		<% for(var i = 2; i <= 4; i++) { %>
+		    		<div class="col-md-4">
+		    			<div class="noticia_wrapper">
+			    			<span class="noticia_autor"><%= noticias[i].autor %></span>
+			    			<a href="noticia?idnoticias=<%= noticias[i].idnoticias %>" class="noticia_titulo"><%= noticias[i].titulo %></a>
+			    			<span class="noticia_data"><%= noticias[i].data_criacao %></span>
+			    			<br />
+			    			<p class="noticia_resumo">
+			    				<%= noticias[i].resumo %>
+			    			</p>
+			    		</div>
+			    	</div>
+			    <% } %>
+	    	</div>
+	    	<div class="row ver_mais">
+	    		<button type="button" class="btn btn-default"><a href="/noticias_all">Ver todas as notícias</a></button>
+	    	</div>
+	    </div>
+<%- include(footer) %>
