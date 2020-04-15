@@ -1,7 +1,10 @@
 const { check, validationResult } = require('express-validator');
 module.exports = function(app){
     var home = app.controller.home;
-    app.get('/', home.index);
+    //app.get('/', home.index);
+    app.get('/', function(req,res){
+        res.send('sucesso!!! ');
+    });
     app.get('/noticias_all', home.index);
     app.get('/noticia:id?', home.find);
     app.post('/cadastro', home.register);
