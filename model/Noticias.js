@@ -1,7 +1,6 @@
 function Noticias(){
 
 }
-const sql = [4];
 Noticias.prototype.getData = function(connection, callback){
     connection.query('select * from noticias',callback);
 }
