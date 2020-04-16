@@ -2,7 +2,7 @@ const { check, validationResult } = require('express-validator');
 module.exports = function(app){
       var result ={
             index: function(req,res){
-                  var connection =  app.db.db();
+                  var connection =  app.db.db;
                   var origem = req.path.replace( '/', '');;
                   var home = new app.model.Noticias;
                   home.getData(connection, function(error,result){
