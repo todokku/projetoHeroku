@@ -49,7 +49,7 @@ module.exports = function(app){
             },
             authentication: function(req,res){
                   let user = req.body;
-                  var connection =  app.db.db();
+                  var connection =  app.db.db;
                   var home = new app.model.Noticias;
                   home.getAuthentication(user,connection, function(error,result){
                         console.log(result);
