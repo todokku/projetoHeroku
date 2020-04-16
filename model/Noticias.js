@@ -2,7 +2,7 @@ function Noticias(){
 
 }
 Noticias.prototype.getData = function(connection, callback){
-    connection.query('select * from noticias',callback);
+    connection.client.query('select * from noticias',callback);
 }
 Noticias.prototype.getInsert = function(noticia,connection,callback){
     connection.query('insert into noticias set ?',noticia, callback);
