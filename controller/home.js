@@ -5,9 +5,10 @@ module.exports = function(app){
                   var connection =  app.db.db;
                   var origem = req.path.replace( '/', '');;
                   var home = new app.model.Noticias;
-                  console.log(connection);
                   home.getData(connection, function(error,result){
-                        origem === "noticias_all" ? res.render("noticias/noticias", { header: '../header.ejs', footer: '../footer.ejs', noticias: result}) : res.render("index", { header: 'header.ejs', footer: 'footer.ejs', noticias: result});
+                        //origem === "noticias_all" ? res.render("noticias/noticias", { header: '../header.ejs', footer: '../footer.ejs', noticias: result}) : res.render("index", { header: 'header.ejs', footer: 'footer.ejs', noticias: result});
+                        res.render("noticias/noticias", { header: '../header.ejs', footer: '../footer.ejs', noticias: result});
+                        console.log(result);
                   });
             },
             register: function(req,res){
